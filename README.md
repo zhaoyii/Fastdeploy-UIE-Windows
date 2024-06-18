@@ -46,5 +46,5 @@ tar -xvfz uie-base.tgz
 ```
 使用 CPU 运行推理：
 ```PowerShell
-./infer_demo uie-base 0
+.\infer_demo.exe uie-base 0
 ```
