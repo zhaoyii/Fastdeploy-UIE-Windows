@@ -29,7 +29,7 @@ cmake .. -DFASTDEPLOY_INSTALL_DIR=%CD%\fastdeploy-win-x64-1.0.7
 ```
 4.使用`msbuild`编译项目
 ```PowerShell
-msbuild infer_demo.sln
+MSBuild infer_demo.sln
 ```
 5.将`FastDeploy`依赖库拷贝至可执行程序所在目录, 或者配置环境变量。
 ```PowerShell
@@ -42,7 +42,7 @@ fastdeploy_init.bat install "%cd%" "..\Debug"
 ```PowerShell
 cd ..\Debug
 Invoke-WebRequest -Uri https://bj.bcebos.com/fastdeploy/models/uie/uie-base.tgz -OutFile "uie-base.tgz"
-tar -xvfz uie-base.tgz
+tar -xvf uie-base.tgz
 ```
 使用 CPU 运行推理：
 ```PowerShell
