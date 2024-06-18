@@ -48,3 +48,9 @@ tar -xvf uie-base.tgz
 ```PowerShell
 .\infer_demo.exe uie-base 0
 ```
+
+## 参考
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows.md
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows_build.md#VisualStudio2019Sln3
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/build_and_install/download_prebuilt_libraries.md
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/build_and_install/download_prebuilt_libraries.md
