@@ -29,7 +29,7 @@ tar -xvf fastdeploy-win-x64-1.0.7.tgz
 3.配置一个CMake项目，并指定`FastDeploy`库的安装目录为当前工作目录下的`fastdeploy-win-x64-1.0.7`目录。为了在构建项目时能够找到并使用`FastDeploy`库：
 
 ```PowerShell
-cmake .. -DFASTDEPLOY_INSTALL_DIR=%CD%\fastdeploy-win-x64-1.0.7
+cmake .. -G "Visual Studio 16 2019" -A x64 -DFASTDEPLOY_INSTALL_DIR=%CD%\fastdeploy-win-x64-1.0.7
 ```
 
 4.使用`msbuild`编译项目

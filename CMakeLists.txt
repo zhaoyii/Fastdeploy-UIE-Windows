@@ -17,7 +17,7 @@ CMAKE_MINIMUM_REQUIRED (VERSION 3.10)
 
 # 设置 FASTDEPLOY_INSTALL_DIR 选项，用于指定 fastdeploy sdk 的路径
 # 设置 FASTDEPLOY_INSTALL_DIR 为包含盘符的路径
-set(FASTDEPLOY_INSTALL_DIR "C:/Users/admin/Documents/GitHub/Fastdeploy-UIE-Windows/build/fastdeploy-win-x64-1.0.7" CACHE PATH "Path of downloaded fastdeploy sdk.")
+option(FASTDEPLOY_INSTALL_DIR "Path of downloaded fastdeploy sdk.")
 
 include(${FASTDEPLOY_INSTALL_DIR}/FastDeploy.cmake)
 
