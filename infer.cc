@@ -65,6 +65,11 @@ int main(int argc, char* argv[]) {
   std::string model_path = model_dir + sep + "inference.pdmodel";
   std::string param_path = model_dir + sep + "inference.pdiparams";
   std::string vocab_path = model_dir + sep + "vocab.txt";
+
+  std::cout << "model_path: " + model_path << std::endl;
+  std::cout << "param_path: " + model_path << std::endl;
+  std::cout << "vocab_path: " + model_path << std::endl;
+
   using fastdeploy::text::SchemaNode;
   using fastdeploy::text::UIEResult;
 
