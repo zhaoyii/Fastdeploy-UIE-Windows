@@ -6,8 +6,8 @@
 ### 2.编译
 
 编译环境依赖：
-- cmake >= 3.12
-- Visual Studio 16 2019
+- Visual Studio 16 2019 （[下载链接](https://learn.microsoft.com/zh-cn/visualstudio/releases/2019/redistribution#--download), [安装建议](https://learn.microsoft.com/zh-cn/windows/dev-environment/rust/setup)）
+- cmake >= 3.12 （Visual Studio 自带，不用安装）
 
 **注意：使用`x64 Native Tools Command Prompt for VS 2019`命令行工具编译项目。**
 
@@ -29,12 +29,14 @@ tar -xvf fastdeploy-win-x64-1.0.7.tgz
 3.配置一个CMake项目，并指定`FastDeploy`库的安装目录为当前工作目录下的`fastdeploy-win-x64-1.0.7`目录。为了在构建项目时能够找到并使用`FastDeploy`库：
 
 ```PowerShell
+# 使用 x64 Native Tools Command Prompt for VS 2019 命令行窗口编译配置
 cmake .. -G "Visual Studio 16 2019" -A x64 -DFASTDEPLOY_INSTALL_DIR=%CD%\fastdeploy-win-x64-1.0.7
 ```
 
 4.使用`msbuild`编译项目
 
 ```PowerShell
+# 使用 x64 Native Tools Command Prompt for VS 2019 命令行窗口编译
 MSBuild infer_demo.sln /m /p:Configuration=Release /p:Platform=x64
 ```
 
