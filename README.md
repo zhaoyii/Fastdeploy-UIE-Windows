@@ -64,8 +64,10 @@ tar -xvf uie-base.tgz
 使用 CPU 运行推理：
 
 ```PowerShell
-.\infer_demo.exe uie-base 0 0 2月8日上午北京冬奥会自由式滑雪女子大跳台决赛中中国选手谷
+.\infer_demo.exe uie-base 0 0 0.03 512 地点,地名,地方,人名,姓名,名字,时间,感情,情绪,心情 1 1 2024年5月6日，周五下午，李华在北京的天安门广场上，与他的好朋友张明一起享受阳光。他们都感到非常开心。突然，一个名叫'纽约'的小狗跑了过来，李华笑着说，'这只狗的名字真有趣！'张明回答说，'是的，我也觉得很有趣。'然后，他们决定一起去吃一家叫做'巴黎'的法国餐厅。
 ```
+
+**注意：使用百度飞桨 paddle 运行时。windows 使用 onnx 运行时会死循环。**
 
 ## 参考
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows.md
