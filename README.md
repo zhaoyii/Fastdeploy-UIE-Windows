@@ -6,8 +6,8 @@
 ### 2.编译
 
 编译环境依赖：
-- cmake >= 3.12
-- Visual Studio 16 2019
+- Visual Studio 16 2019 （[下载链接](https://learn.microsoft.com/zh-cn/visualstudio/releases/2019/redistribution#--download), [安装建议](https://learn.microsoft.com/zh-cn/windows/dev-environment/rust/setup)）
+- cmake >= 3.12 （Visual Studio 自带，不用安装）
 
 **注意：使用`x64 Native Tools Command Prompt for VS 2019`命令行工具编译项目。**
 
@@ -29,16 +29,18 @@ tar -xvf fastdeploy-win-x64-1.0.7.tgz
 3.配置一个CMake项目，并指定`FastDeploy`库的安装目录为当前工作目录下的`fastdeploy-win-x64-1.0.7`目录。为了在构建项目时能够找到并使用`FastDeploy`库：
 
 ```PowerShell
+# 使用 x64 Native Tools Command Prompt for VS 2019 命令行窗口编译配置
 cmake .. -G "Visual Studio 16 2019" -A x64 -DFASTDEPLOY_INSTALL_DIR=%CD%\fastdeploy-win-x64-1.0.7
 ```
 
 4.使用`msbuild`编译项目
 
 ```PowerShell
+# 使用 x64 Native Tools Command Prompt for VS 2019 命令行窗口编译
 MSBuild infer_demo.sln /m /p:Configuration=Release /p:Platform=x64
 ```
 
-5.将`FastDeploy`依赖库拷贝至可执行程序所在目录, 或者配置环境变量。
+5.将`FastDeploy`动态依赖库拷贝至可执行程序所在目录。（或者配置环境变量。）建议将动态依赖库拷贝到`infer_demo.exe`所在目录，[原理👋](./doc/README_DLL.md)。
 
 ```PowerShell
 cd fastdeploy-win-x64-1.0.7
@@ -65,6 +67,6 @@ tar -xvf uie-base.tgz
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows.md
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows_build.md#VisualStudio2019Sln3
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/build_and_install/download_prebuilt_libraries.md
-- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/build_and_install/download_prebuilt_libraries.md
 - https://github.com/PaddlePaddle/FastDeploy/issues/2290
 - https://github.com/PaddlePaddle/FastDeploy/blob/17ff330daa9b87a5e443899579fdccfd92782ffe/docs/cn/faq/build_on_win_with_gui.md#%E7%89%B9%E5%88%AB%E6%8F%90%E7%A4%BA
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/examples/text/uie/cpp/README_CN.md
