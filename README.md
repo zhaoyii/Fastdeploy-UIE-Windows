@@ -1,6 +1,7 @@
 ### 1. 准备源码
-
-从百度飞桨 UIE [示例库](https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/text/uie/cpp)下载源码和 CMakeLists.txt 文件。
+项目内 C++ 源码`infer.cc`和编译配置文件` CMakeLists.txt`拷贝自百度飞桨 [UIE 示例库](https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/text/uie/cpp)，修复了如下问题：
+1. 增加源代码文件预编译指令`urf-8`，解决运行模型，因为中文字符串编码问题导致死循环。
+2. 解决输出中文乱码问题。
 
 
 ### 2.编译
@@ -14,6 +15,7 @@
 1.创建编译目录
 
 ```PowerShell
+# 使用 PowerShell
 mkdir build
 cd build
 ```
@@ -21,6 +23,7 @@ cd build
 2.下载`FastDeploy`预编译库(PowerShell)
 
 ```PowerShell
+# 使用 PowerShell
 Invoke-WebRequest -Uri "https://bj.bcebos.com/fastdeploy/release/cpp/fastdeploy-win-x64-1.0.7.zip" -OutFile "fastdeploy-win-x64-1.0.7.tgz"
 
 tar -xvf fastdeploy-win-x64-1.0.7.tgz
@@ -52,6 +55,7 @@ cd fastdeploy-win-x64-1.0.7
 下载模型：
 
 ```PowerShell
+# 使用 PowerShell
 cd ..\Release
 Invoke-WebRequest -Uri https://bj.bcebos.com/fastdeploy/models/uie/uie-base.tgz -OutFile "uie-base.tgz"
 tar -xvf uie-base.tgz
