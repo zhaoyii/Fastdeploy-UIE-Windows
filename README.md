@@ -1,6 +1,6 @@
 ### 1. 准备源码
 项目内 C++ 源码`infer.cc`和编译配置文件` CMakeLists.txt`拷贝自百度飞桨 [UIE 示例库](https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/text/uie/cpp)，修复了如下问题：
-1. 增加源代码文件预编译指令`urf-8`，解决运行模型，因为中文字符串编码问题导致死循环。
+1. 增加源代码文件预编译指令`utf-8`，解决运行模型，因为中文字符串编码问题导致死循环。
 2. 解决输出中文乱码问题。
 
 
