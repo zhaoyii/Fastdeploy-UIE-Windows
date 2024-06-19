@@ -40,7 +40,7 @@ cmake .. -G "Visual Studio 16 2019" -A x64 -DFASTDEPLOY_INSTALL_DIR=%CD%\fastdep
 MSBuild infer_demo.sln /m /p:Configuration=Release /p:Platform=x64
 ```
 
-5.将`FastDeploy`依赖库拷贝至可执行程序所在目录, 或者配置环境变量。
+5.将`FastDeploy`动态依赖库拷贝至可执行程序所在目录。（或者配置环境变量。）建议将动态依赖库拷贝到`infer_demo.exe`所在目录，[原理👋](./doc/README_DLL.md)。
 
 ```PowerShell
 cd fastdeploy-win-x64-1.0.7
