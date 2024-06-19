@@ -64,7 +64,7 @@ tar -xvf uie-base.tgz
 使用 CPU 运行推理：
 
 ```PowerShell
-.\infer_demo.exe uie-base 0
+.\infer_demo.exe uie-base 0 0 2月8日上午北京冬奥会自由式滑雪女子大跳台决赛中中国选手谷
 ```
 
 ## 参考
