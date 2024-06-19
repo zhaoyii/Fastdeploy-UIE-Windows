@@ -2,11 +2,11 @@
 
 Windows会按照以下顺序搜索DLL文件：
 
-1. 当前目录：Windows首先检查运行.exe文件的当前目录。
-2. 系统目录：通常是C:\Windows\System32。
-3. 16位系统目录：对于一些旧的16位应用程序，会检查C:\Windows\System。
-4. Windows目录：通常是C:\Windows。
-5. PATH环境变量：如果在前面的目录中没有找到DLL，Windows会检查PATH环境变量中列出的目录。
+1. 当前目录：Windows首先检查运行`.exe`文件的当前目录。（注意：指`.exe`所在目录）
+2. 系统目录：通常是`C:\Windows\System32`。
+3. 16位系统目录：对于一些旧的16位应用程序，会检查`C:\Windows\System`。
+4. Windows目录：通常是`C:\Windows`。
+5. PATH环境变量：如果在前面的目录中没有找到DLL，Windows会检查`PATH`环境变量中列出的目录。
 
 当系统找到DLL后，会将它加载到内存中，并执行.exe文件中调用的函数。如果在这些步骤中找不到DLL，程序将无法启动，并可能显示“找不到指定模块”的错误消息。
 
