@@ -65,6 +65,6 @@ tar -xvf uie-base.tgz
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows.md
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/faq/use_sdk_on_windows_build.md#VisualStudio2019Sln3
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/build_and_install/download_prebuilt_libraries.md
-- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/cn/build_and_install/download_prebuilt_libraries.md
 - https://github.com/PaddlePaddle/FastDeploy/issues/2290
 - https://github.com/PaddlePaddle/FastDeploy/blob/17ff330daa9b87a5e443899579fdccfd92782ffe/docs/cn/faq/build_on_win_with_gui.md#%E7%89%B9%E5%88%AB%E6%8F%90%E7%A4%BA
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/examples/text/uie/cpp/README_CN.md
