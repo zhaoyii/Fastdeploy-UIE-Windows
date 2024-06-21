@@ -1,0 +1,5 @@
+https://learn.microsoft.com/zh-tw/cpp/parallel/openmp/reference/openmp-library-reference?view=msvc-170
+https://github.com/godotengine/godot/issues/14935
+https://helpdesk.microsurvey.com/article/1548-error-vcomp140-dll-or-some-other-windows-component-not-found-when-launching-mscad#:~:text=message%20on%20launching.-,VCOMP140.,system%20if%20it%20is%20missing.
+https://answers.microsoft.com/en-us/windows/forum/all/missing-vcomp140dll/afca0b6b-3ced-4e82-8ce8-8734a440d516
+https://www.160.com/article/5525.html
