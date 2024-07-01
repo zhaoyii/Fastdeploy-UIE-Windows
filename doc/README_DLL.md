@@ -44,3 +44,17 @@ gcc -o myprogram myprogram.c -L/path/to/library -lmylib -Wl,-rpath=/path/to/libr
 **在Windows系统中，如果使用DLL，通常会在编译时指定DLL的路径，但这并不是硬编码到EXE文件中，而是通过其他方式实现，比如在安装过程中将DLL放在EXE相同的目录下，或者通过修改系统的环境变量来确保DLL可以被找到。**
 
 需要注意的是，硬编码路径可能会导致问题，比如当程序被移动到其他目录或者系统中没有指定的路径时，程序可能无法运行。因此，**通常建议不要硬编码路径，而是依赖于操作系统的标准搜索机制或者在运行时动态设置库路径。**
+
+## macos 寻找并链接到动态库的流程？
+从一个寻找动态库失败的例子看流程：
+```bash
+Library not loaded: /usr/local/lib/libsqlcipher.0.dylib
+Referenced from: <9FEED709-F275-3512-8CF1-57418C8AA73A> /Applications/42memo.app/Contents/MacOS/42memo
+Reason: tried: '/usr/local/lib/libsqlcipher.0.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/lib/libsqlcipher.0.dylib' (no such file), '/usr/local/lib/libsqlcipher.0.dylib' (no such file), '/usr/lib/libsqlcipher.0.dylib' (no such file, not in dyld cache)
+```
+
+寻找流程：
+1. 写入二进制程序或者 dylib 的固定路径。
+2. `/usr/local/lib`目录。
+3. `/System/Volumes/Preboot/Cryptexes/OS/usr/local/lib`目录。
+4. `/usr/lib`目录。
