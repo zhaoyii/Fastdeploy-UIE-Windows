@@ -13,7 +13,7 @@ set(CMAKE_DEBUG_POSTFIX "_d")  # Debug版本添加后缀
 
 #------------------------------ 第三方依赖配置 ------------------------------
 # 设置 FastDeploy SDK 路径（推荐使用项目相对路径）
-set(FASTDEPLOY_DIR "${CMAKE_SOURCE_DIR}/libs/fastdeploy-win-x64-1.0.7")
+set(DFASTDEPLOY_INSTALL_DIR "${CMAKE_SOURCE_DIR}/build/fastdeploy-win-x64-1.0.7")
 
 # 架构检测（自动处理 x86/x64）
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -33,13 +33,13 @@ add_executable(${PROJECT_NAME}
 #------------------------------ 包含目录配置 ------------------------------
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/uie  # 优先本地头文件
-    ${FASTDEPLOY_DIR}/include
+    ${DFASTDEPLOY_INSTALL_DIR}/include
 )
 
 #------------------------------ 链接配置 ------------------------------
 target_link_directories(${PROJECT_NAME} PRIVATE
-    ${FASTDEPLOY_DIR}/lib
-    ${FASTDEPLOY_DIR}/lib/${ARCH_DIR}
+    ${DFASTDEPLOY_INSTALL_DIR}/lib
+    ${DFASTDEPLOY_INSTALL_DIR}/lib/${ARCH_DIR}
 )
 
 # 假设需要链接的库文件列表
@@ -52,7 +52,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 # 自动复制 DLL 到输出目录（支持 Debug/Release 配置）
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-    "${FASTDEPLOY_DIR}/lib/${ARCH_DIR}/"
+    "${DFASTDEPLOY_INSTALL_DIR}/lib/${ARCH_DIR}/"
     "$<TARGET_FILE_DIR:${PROJECT_NAME}>"
     COMMENT "Copying runtime dependencies..."
 )
